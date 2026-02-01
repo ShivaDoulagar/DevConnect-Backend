@@ -28,6 +28,7 @@ def sign():
                     {
                         "message": "Sign in successful",
                         "token": token,
+                        "username": user.username,
                     }
                 )
             else:
@@ -50,7 +51,7 @@ def register():
         hashed_password = bcrypt.hashpw(password, salt)
         new_user = User(
             email=data["email"],
-            name=data["name"],
+            username=data["name"],
             public_id=str(uuid.uuid4()),
             password_hash=hashed_password.decode("utf-8"),
         )

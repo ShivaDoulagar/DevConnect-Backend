@@ -30,3 +30,8 @@ class Config:
     FIREBASE_PROJECT_ID = os.getenv("FIREBASE_PROJECT_ID")
     FIREBASE_CLIENT_EMAIL = os.getenv("FIREBASE_CLIENT_EMAIL")
     FIREBASE_PRIVATE_KEY = os.getenv("FIREBASE_PRIVATE_KEY")
+
+    # File Upload
+    UPLOAD_FOLDER = "uploads/profile_images"
+    MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size
+    ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}
